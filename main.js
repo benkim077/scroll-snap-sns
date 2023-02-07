@@ -1,24 +1,8 @@
-import { articleList, pushArticleItem } from "./src/store"
+import User from "./modules/user.js"
+import Article from "./modules/article.js"
 
-// const App = document.querySelector("#App")
-// const articleForm = document.createElement("form")
+const App = document.querySelector("#App")
+App.innerText = "Hello App"
 
-// App.appendChild(articleForm)
-
-// const submitEventHandler = (event) => {
-//     event.preventDefault
-//     console.log(event.target.value)
-// }
-
-// const articleFormWithJSX = (
-//     <form onSubmit={submitEventHandler}>
-//         <label></label>
-//         <input id="title" type="text"></input>
-//         <input id="content" type="text"></input>
-//         <input id="writer" type="text"></input>
-//         <input type="submit"></input>
-//     </form>
-// )
-
-// const createArticle = () => {}
-// document.createElement("")
+const newUser = new User(0, "benkim077", "just07#")
+const newArticle = new Article(0, "first article", "content", "ben", 0)
