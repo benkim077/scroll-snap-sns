@@ -6,3 +6,5 @@ App.innerText = "Hello App"
 
 const newUser = new User(0, "benkim077", "just07#")
 const newArticle = new Article(0, "first article", "content", "ben", 0)
+
+console.log(newUser)

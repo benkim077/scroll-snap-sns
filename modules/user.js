@@ -1,20 +1,20 @@
 export default class User {
-    constructor(uid, id, password) {
-        this._uid = uid
-        this._id = id
-        this._password = password
-    }
+    #uid
+    #id
+    #password
+    // constructor(uid, id, password) {
+    // }
 
     get uid() {
-        return this._uid
+        return this.#uid
     }
 
     get id() {
-        return this._id
+        return this.#id
     }
 
     get password() {
-        return this._password
+        return this.#password
     }
 
     postArticle() {}

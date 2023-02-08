@@ -1,38 +1,38 @@
 export default class Article {
-    constructor(id, title, content, writer, likeUsers = []) {
-        this._id = id // Unique String
-        this._title = title // String
-        this._content = content // String (Just String or Image Url)
-        this._writer = writer // User Instance
-        this._likeUsers = likeUsers // Array : Element is User Instance.
-    }
+    #id // Unique String
+    #title // String
+    #content // String (Just String or Image Url)
+    #writer // User Instance
+    #likeUsers // Array : Element is User Instance.
+    // constructor(id, title, content, writer, likeUsers = []) {
+    // }
 
     get id() {
-        return this._id
+        return this.#id
     }
 
     get title() {
-        return this._title
+        return this.#title
     }
 
     get content() {
-        return this._content
+        return this.#content
     }
 
     get writer() {
-        return this._writer
+        return this.#writer
     }
 
-    get likes() {
-        return this._likes
+    get likeUsers() {
+        return this.#likeUsers
     }
 
-    getUsersLike(user) {
-        this._likeUsers = [...this._likeUsers, user]
+    addUsersLike(user) {
+        this.#likeUsers = [...this.#likeUsers, user]
     }
 
-    loseUsersUnlike(user) {
-        this._likeUsers.filter((userEl) => {
+    deleteUsersUnlike(user) {
+        this.#likeUsers.filter((userEl) => {
             return !Object.is(user, userEl)
         })
     }
